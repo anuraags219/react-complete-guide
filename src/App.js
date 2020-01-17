@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 import Person from './Person/Person';
-import person from './Person/Person';
 
 class App extends Component {
   state = {
     persons: [
       { id: 'dscds3', name: "Anuraag", age: 25 },
-      { id: 'werwrw', name: "Raghwendra", age: 34 },
+      { id: 'werwrw', name: "Jacob", age: 34 },
       { id: 'wrwerwewt4', name: "Nova", age: 23 }
     ],
     showPersons: false
@@ -52,7 +51,8 @@ class App extends Component {
         font: 'inherit',
         border: '1px solid blue',
         padding: '8px',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        
     };
 
     let persons = null;
@@ -72,6 +72,7 @@ class App extends Component {
       </div>
       );
         style.backgroundColor = 'red';
+      
     }
 
     let classes = [];
@@ -87,14 +88,16 @@ class App extends Component {
     classes = classes.join(' ');
 
     return (
+      
       <div className="App">
         <h1>Hi, I'm a React App</h1>
-        <p className = {classes}>It's really working!</p>
+        {/* <p className = {classes}>You need to work hard and learn to make something of your own</p> */}
         <button 
         style = {style}
         onClick = {this.togglePersonsHandler}>Toggle Persons</button>
         {persons}
       </div>
+      
     );
   }
 }
